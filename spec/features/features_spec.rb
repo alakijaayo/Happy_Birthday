@@ -1,7 +1,6 @@
 feature Birthday do
-  describe 'request name' do
-    visit ('/')
-    fill_in 'name', with: 'Ayodele Alakija'
-    expect(code).to have_content 'Ayodele Alakija'
+  scenario 'wishes a person happy birthday' do
+    sign_in_and_party
+    expect(page).to have_content 'HAPPY BIRTHDAY Ayodele Alakija!!!'
   end
 end
